@@ -168,7 +168,7 @@ namespace BitPayAPI
         private Dictionary<string, string> getParams(decimal price, string currency, InvoiceParams invoiceParams)
         {
             var parameters = invoiceParams.getDictionary();
-            parameters.Add("price", price.ToString());
+            parameters.Add("price", price.ToString(CultureInfo.InvariantCulture));
             parameters.Add("currency", currency);
 		    return parameters;
 	    }
